@@ -19,7 +19,7 @@ function App() {
               element={<ProductScreen></ProductScreen>}
             ></Route>
             <Route
-              path="/cart"
+              path="/cart/:id?"
               element={<CartScreen></CartScreen>}
               exact
             ></Route>
