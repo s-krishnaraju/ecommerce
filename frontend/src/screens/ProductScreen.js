@@ -31,7 +31,10 @@ function ProductScreen() {
     navigate(`/cart/${id}?qty=${qty}`);
   };
 
-  const inStock = product.countInStock > 0;
+  let inStock = false;
+  if (product) {
+    inStock = product.countInStock > 0;
+  }
   const [qty, setQty] = useState(1);
 
   return (

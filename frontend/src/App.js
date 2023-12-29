@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ProductScreen from "./screens/ProductScreen";
 import LoginScreen from "./screens/LoginScreen";
 import CartScreen from "./screens/CartScreen";
+import RegisterScreen from "./screens/RegisterScreen";
+
 function App() {
   return (
     <Router>
@@ -26,6 +28,11 @@ function App() {
             <Route
               path="/login"
               element={<LoginScreen></LoginScreen>}
+              exact
+            ></Route>
+            <Route
+              path="/register"
+              element={<RegisterScreen></RegisterScreen>}
               exact
             ></Route>
           </Routes>
