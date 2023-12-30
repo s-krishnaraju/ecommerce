@@ -41,14 +41,12 @@ export const register = (name, email, password) => async (dispatch) => {
     dispatch({ type: USER_REGISTER_REQUEST });
 
     const { data } = await axios.post("/api/users/register/", {
-      username: email,
+      email: email,
       password: password,
       name: name,
     });
 
     dispatch({ type: USER_REGISTER_SUCCESS, payload: data });
-
-    localStorage.setItem("userInfo", JSON.stringify(data));
   } catch (error) {
     dispatch({
       type: USER_REGISTER_FAIL,

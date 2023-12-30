@@ -23,7 +23,7 @@ function CartScreen() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const qty = searchParams.get("qty");
+  const qty = Number(searchParams.get("qty"));
   const dispatch = useDispatch();
   const { cartItems } = useSelector((state) => state.cart);
 
